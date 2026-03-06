@@ -1,0 +1,27 @@
+npm create vite@latest frontend -- --template react
+cd frontend
+npm install
+npm install react-router-dom
+
+
+
+vite.config.js
+
+export default defineConfig({
+  base: '/detect-face/',
+  server: {
+    port: 3000, // Force it to 3000 if that's what you prefer
+  }
+})
+
+
+npm run build
+
+
+incmuseum.conf
+location /detect-face/ {
+    # The 'alias' tells Nginx exactly where the React build folder is
+    alias /home/ubuntu/incmuseum/my-react-app/dist/; 
+    index index.html;
+    try_files $uri $uri/ /detect-face/index.html;
+}
