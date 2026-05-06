@@ -1,5 +1,4 @@
 *** Installation
-npm install tailwindcss @tailwindcss/vite
 npm install -D tailwindcss postcss autoprefixer
 npx tailwindcss init -p
 
@@ -9,3 +8,21 @@ npx tailwindcss init -p
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+------------------------------------------------
+npm install tailwindcss @tailwindcss/vite
+
+(Add the @tailwindcss/vite plugin to your Vite configuration.)
+import { defineConfig } from 'vite'
+import tailwindcss from '@tailwindcss/vite'
+export default defineConfig({
+  plugins: [
+    tailwindcss(),
+  ],
+})
+
+
+
+@import "tailwindcss";
