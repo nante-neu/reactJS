@@ -1,5 +1,10 @@
+*** Add  image to the local project
+Create a folder such as src/assets/images/ and place your image there.
+
+
 import React from 'react';
 import logo from './logo.png'; // Tell webpack this JS file uses this image
+import myImage from './assets/images/photo.png';
 
 console.log(logo); // /logo.84287d09.png
 
