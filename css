@@ -1,3 +1,27 @@
 1. EXTERNAL
 2. MODULES
 3. INLINE
+
+
+
+
+
+
+
+
+
+
+
+## inline css
+function Button(){
+  cons styles = {
+    backgroundColor: hsl(200, 100%, 50%),
+    color: "white",
+    paddding: "10 px 20px",
+    borderRadius: 5px,
+  }
+
+  retun(<button className={styles.button}>Click Me</button>)
+}
+
+export default Button
