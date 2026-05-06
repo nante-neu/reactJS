@@ -1,0 +1,10 @@
+*** Installation
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+
+
+
+*** Add Tailwind Directives to CSS (Replace the contents of ./src/index.css with the Tailwind directives.)
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
