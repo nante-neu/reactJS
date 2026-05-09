@@ -23,4 +23,43 @@ frontend/
 │   └── favicon.svg
 └── package.json
 
+3. Practical Examples
+
+Here is how you would write the import lines depending on which file you are currently editing:
+Scenario A: You are in App.jsx
+
+You want to import your pages. Since App.jsx is inside src/, and the apps folder is also inside src/, you start with ./.
+
+    Path: import OpacHome from './apps/opac/pages/OpacHome';
+
+Scenario B: You are in OpacHome.jsx
+
+You want to import a general Navbar from the components folder.
+
+    You are inside pages/. You need to go back one to opac/. (../)
+
+    You need to go back two to apps/. (../../)
+
+    You need to go back three to src/. (../../../)
+
+    Path: import Navbar from '../../../components/Navbar';
+
+    Witty Tip: If you see ../../../../ in your code, your folders are getting a bit too deep! Try to keep your structure flat so you don't get "dot-fatigue."
+
+4. How to verify the path
+
+If you are using VS Code, here is the easiest way to never get a "Module Not Found" error again:
+
+    Start typing import Test from '
+
+    Press Ctrl + Space.
+
+    VS Code will show you a dropdown list of folders. If you don't see apps, you are likely in the wrong starting folder (use ../ to go up until you see it).
+
+5. Why ./apps/ might be confusing
+
+Sometimes, developers use Absolute Paths or Aliases.
+If you see someone import like this: import Home from '@/apps/Home', the @ is a shortcut for the src/ folder. Since you are just starting out with this Ubuntu/RPi setup, stick to the Relative Paths (./ and ../) for now so you can see exactly how the "tree" is connected.
+
+Which file are you trying to import right now? If you tell me the "Starting File" and the "Target File," I can give you the exact string to copy-paste.
 
