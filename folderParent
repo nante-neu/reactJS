@@ -1,0 +1,5 @@
+1. The "Dot" Legend
+Think of your file explorer as a map, and these symbols as your current GPS location:
+    ./ (One Dot): "The folder I am currently in."
+    ../ (Two Dots): "Go back one folder (Up to the parent)."
+    ../../ (Four Dots): "Go back two folders."
