@@ -3,3 +3,24 @@ Think of your file explorer as a map, and these symbols as your current GPS loca
     ./ (One Dot): "The folder I am currently in."
     ../ (Two Dots): "Go back one folder (Up to the parent)."
     ../../ (Four Dots): "Go back two folders."
+
+2. Visualizing your LibERA Structure
+
+frontend/
+├── src/
+│   ├── main.jsx           <-- (Main Entry)
+│   ├── App.jsx            <-- (The "Boss" file)
+│   ├── apps/
+│   │   ├── opac/
+│   │   │   └── pages/
+│   │   │       └── OpacHome.jsx
+│   │   └── circulation/
+│   │       └── pages/
+│   │           └── CirculationDashboard.jsx
+│   └── components/
+│       └── Navbar.jsx
+├── public/
+│   └── favicon.svg
+└── package.json
+
+
